@@ -22,7 +22,7 @@ p {
 }
 
 input[type=button] {
-	width: 30%;
+	width: 24%;
 	margin: 8px 0;
 	padding: 14px 20px;
     color: #FFF;
@@ -87,77 +87,136 @@ header .header-menu ul li a:before {
     left: 0px;
     width: 0px;
     height: 1px;
-    background-color: rgb(251, 255, 0);
+    background-color: #0B5ED8;
     transition: all 1.5s ease
 }
 
 header .header-menu ul li a:hover:before {
     width: 100%
 }
+
+header .header-menu #turismo {
+    background-color: #0B5ED8;
+    border-radius: 4px
+}
+
+header .header-menu #turismo:before {
+    background-color: transparent
+}
 /****************************/
 
 /*********** Main ***********/
 main {
-    margin-bottom: 60px;
+    margin-top: 500px;
 }
+/****************************/
 
-main .main-content {
-    height: 490px;
-    padding: 14px;
+/********* Conteúdo *********/
+.content-header {
+    position: absolute;
+	top: 0;
+    height: 470px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
     background-image: url('../images/01_fundo.png');
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4)
 }
-main .main-content h1, p {
+.content-header h1 {
+    margin-top: 130px;
     color: #FFF
 }
-main .main-content p {
-margin: 20px 0
-}
-/****************************/
 
-/********* Conteúdo *********/
-.container-header,
-.container-content {
-    max-width: 1100px;
-    margin: 0 auto
-}
-.container-header {
-    margin-top: 120px
+.content-header p {
+    margin: 20px 10%;
+    color: #FFF
 }
 
-.container-content {
-    padding: 40px 0 0
+.content-main {
+    max-width: 1130px;
+    margin: 60px auto;
+    padding: 0 16px
 }
-.container-content h1 {
+
+.content-main h1 {
     color: #0B5ED8;
     border-bottom: 1px solid #0B5ED8;
 }
-.container-content p {
+
+.content-main p {
     margin: 14px 0;
     font-size: 15px;
     color: #000
 }
-.container-content
-.container-image,
-.container-image-large {
+
+.content-main
+.container-image {
     text-align: center
 }
-.container-content .container-image img {
+.content-main .container-image img {
     width: 360px;
     height: 180px;
     border-radius: 8px;
     box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4)
 }
+/****************************/
 
-.container-image-large img {
-    width: 70%;
+/********** Hotéis **********/
+.content-hotel {
+    margin: 0 auto;
+    display: flex;
+	flex-direction: row;
+    border-radius: 8px
+}
+
+.content-hotel .hotel {
+    width: 24%;
+    margin: 18px;
+    padding: 16px;
+    box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4);
+    border-radius: 8px
+}
+
+.content-hotel .hotel img {
+    width: 100%;
     border-radius: 8px;
     box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4)
+}
+
+.content-hotel .hotel h2 {
+    font-size: 16px
+}
+
+.content-hotel .hotel .hotel-name-rate {
+    text-align: center
+}
+
+.content-hotel .hotel i.check-star {
+    color: #F4D03F
+}
+
+.content-hotel .hotel .hotel-address-phone p {
+    font-size: 12px
+}
+
+.content-main .button {
+    float: right
+}
+
+.content-main .btn {
+    width: 140px;
+	margin: 2px 18px;
+	padding: 14px 20px;
+    color: #FFF;
+	background-color: #0B5ED8;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer
+}
+
+.content-main .btn:hover {
+    color: #000;
+    background-color: #FFF
 }
 /****************************/
 
@@ -165,12 +224,26 @@ margin: 20px 0
 footer {
     position: absolute;
     width: 100%;
-    padding: 28px 58px;
+    padding: 20px 58px;
     font-size: 14px;
     text-align: center;
     background-color: #121518
+}
+footer p {
+    color: #FFF
 }
 footer a {
     color: #0B5ED8
 }
 /****************************/
+
+/********** MOBILE **********/
+@media screen and (max-width: 760px) {
+    .content-hotel {
+        flex-direction: column
+    }
+
+    .content-hotel .hotel {
+        width: 92%
+    }
+}
