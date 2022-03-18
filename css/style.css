@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden
+}
+
+a {
+	text-decoration: none
+}
+
+p {
+    color: #000
+    /*text-indent: 3ch*/
+}
+
+input[type=button] {
+	width: 30%;
+	margin: 8px 0;
+	padding: 14px 20px;
+    color: #FFF;
+	box-sizing: border-box;
+	background-color: transparent;
+	border: 2px solid #FFF;
+	border-radius: 4px;
+	cursor: pointer
+}
+
+input[type=button]:hover {
+    color: #000;
+    background-color: #FFF
+}
+
+/*********** Menu ***********/
+header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+    padding: 10px 60px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background: transparent;
+	z-index: 1
+}
+
+header .header-tittle {
+	flex-direction: column;
+	box-sizing: border-box
+}
+header .header-tittle a {
+    color: #FFF;
+    font-size: 22px
+}
+header .header-tittle img {
+    width: 136px;
+    height: 24px
+}
+
+header .header-menu ul li {
+	display: inline-block;
+	margin: 6px 12px;
+	font-size: 13px
+}
+
+header .header-menu ul li a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px;
+    transform: 2ms ease-in;
+    position: relative
+}
+
+header .header-menu ul li a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(251, 255, 0);
+    transition: all 1.5s ease
+}
+
+header .header-menu ul li a:hover:before {
+    width: 100%
+}
+/****************************/
+
+/*********** Main ***********/
+main {
+    margin-bottom: 60px;
+}
+
+main .main-content {
+    height: 490px;
+    padding: 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../images/01_fundo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4)
+}
+main .main-content h1, p {
+    color: #FFF
+}
+main .main-content p {
+margin: 20px 0
+}
+/****************************/
+
+/********* Conteúdo *********/
+.container-header,
+.container-content {
+    max-width: 1100px;
+    margin: 0 auto
+}
+.container-header {
+    margin-top: 120px
+}
+
+.container-content {
+    padding: 40px 0 0
+}
+.container-content h1 {
+    color: #0B5ED8;
+    border-bottom: 1px solid #0B5ED8;
+}
+.container-content p {
+    margin: 14px 0;
+    font-size: 15px;
+    color: #000
+}
+.container-content
+.container-image,
+.container-image-large {
+    text-align: center
+}
+.container-content .container-image img {
+    width: 360px;
+    height: 180px;
+    border-radius: 8px;
+    box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4)
+}
+
+.container-image-large img {
+    width: 70%;
+    border-radius: 8px;
+    box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4)
+}
+/****************************/
+
+/********** Footer **********/
+footer {
+    position: absolute;
+    width: 100%;
+    padding: 28px 58px;
+    font-size: 14px;
+    text-align: center;
+    background-color: #121518
+}
+footer a {
+    color: #0B5ED8
+}
+/****************************/
