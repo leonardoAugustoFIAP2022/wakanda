@@ -115,6 +115,8 @@ main {
 .content-header {
     position: absolute;
 	top: 0;
+    right: 0;
+    left: 0;
     height: 470px;
     text-align: center;
     background-image: url('../images/01_fundo.png');
@@ -161,51 +163,52 @@ main {
 }
 /****************************/
 
-/********** Hotéis **********/
-.content-hotel {
-    margin: 0 auto;
+/*********** Card ***********/
+.card-content {
+    margin-bottom: 80px;
+}
+
+.card {
+    margin-right: -18px;
+    margin-left: -18px;
     display: flex;
 	flex-direction: row;
     border-radius: 8px
 }
 
-.content-hotel .hotel {
+.card-body {
     width: 24%;
     margin: 18px;
     padding: 16px;
     box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4);
     border-radius: 8px
 }
-
-.content-hotel .hotel img {
+.card-body img {
     width: 100%;
+    height: 122px;
+    margin-bottom: 8px;
     border-radius: 8px;
     box-shadow: 0px 10px 12px -3px rgba(0,0,0,0.4)
 }
-
-.content-hotel .hotel h2 {
+.card-body h2 {
     font-size: 16px
 }
-
-.content-hotel .hotel .hotel-name-rate {
+.card-body .card-name-rate {
     text-align: center
 }
-
-.content-hotel .hotel i.check-star {
+.card-body i.check-star {
     color: #F4D03F
 }
-
-.content-hotel .hotel .hotel-address-phone p {
+.card-body .card-address-phone p {
     font-size: 12px
 }
 
-.content-main .button {
+.card-button {
     float: right
 }
-
-.content-main .btn {
+.card-button .btn {
     width: 140px;
-	margin: 2px 18px;
+	margin: 2px 0;
 	padding: 14px 20px;
     color: #FFF;
 	background-color: #0B5ED8;
@@ -213,10 +216,8 @@ main {
 	border-radius: 4px;
 	cursor: pointer
 }
-
-.content-main .btn:hover {
-    color: #000;
-    background-color: #FFF
+.card-button .btn:hover {
+    background-color: #0954C2
 }
 /****************************/
 
@@ -224,26 +225,33 @@ main {
 footer {
     position: absolute;
     width: 100%;
-    padding: 20px 58px;
+    padding: 40px 58px;
     font-size: 14px;
     text-align: center;
-    background-color: #121518
+    background-color: #1D262D
 }
 footer p {
     color: #FFF
 }
 footer a {
-    color: #0B5ED8
+    color: #BABBA3
 }
 /****************************/
 
 /********** MOBILE **********/
 @media screen and (max-width: 760px) {
-    .content-hotel {
+
+    header {
+        text-align: center;
+        display: flex;
         flex-direction: column
     }
 
-    .content-hotel .hotel {
+    .card {
+        flex-direction: column
+    }
+
+    .card .card-body {
         width: 92%
     }
 }
